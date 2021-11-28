@@ -111,12 +111,15 @@ export default {
     },
     filterList:function() {
       if (this.listItemsStatus === 2) {
+        // eslint-disable-next-line vue/no-side-effects-in-computed-properties
         this.currentFilter = 'Active'
         return this.todolist.filter(item => !item.completed)
       } else if (this.listItemsStatus === 3) {
+        // eslint-disable-next-line vue/no-side-effects-in-computed-properties
         this.currentFilter = 'Completed'
         return this.todolist.filter(item => item.completed)
       } else {
+        // eslint-disable-next-line vue/no-side-effects-in-computed-properties
         this.currentFilter = 'All'
         return this.todolist
       }
